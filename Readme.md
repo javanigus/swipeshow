@@ -40,11 +40,13 @@ Swipeshow goes by the assumption that your slideshow element looks like
 
 ``` html
 <div class="my-gallery swipeshow">
-  <ul class="slides">
-    <li class="slide"> ... </li>
-    <li class="slide"> ... </li>
-    <li class="slide"> ... </li>
-  </ul>
+  <div class="frame">
+   <ul class="slides">
+     <li class="slide"> ... </li>
+     <li class="slide"> ... </li>
+     <li class="slide"> ... </li>
+   </ul>
+  </div>
 </div>
 ```
 
@@ -57,7 +59,7 @@ Define the dimensions of your slideshow. For responsive layouts, you may
 also use percent-based widths (`width: 100%`).
 
 ``` css
-.my-gallery {
+.my-gallery .frame {
   width: 200px;
   height: 200px; }
 ```
@@ -113,15 +115,19 @@ They will work as expected.
 
 ``` html
 <div class="my-gallery swipeshow">
+ <div class="frame">
   <ul class="slides">
     <li class="slide"> ... </li>
     <li class="slide"> ... </li>
     <li class="slide"> ... </li>
   </ul>
-
+ </div>
+ 
   <!-- optional controls: -->
-  <button class="next"></button>
-  <button class="previous"></button>
+  <div class="controls">
+   <button class="next"></button>
+   <button class="previous"></button>
+  </div>
 </div>
 ```
 
@@ -142,14 +148,18 @@ To have dots, simply have a `.dots` container after the `.slides`:
 
 ``` html
 <div class="my-gallery swipeshow">
+ <div class="frame">
   <ul class="slides">
     <li class="slide"> ... </il>
     <li class="slide"> ... </li>
     <li class="slide"> ... </li>
   </ul>
-
+ </div>
+ 
   <!-- optional controls: -->
-  <div class='dots'></div>
+  <div class="controls">
+   <div class='dots'></div>
+  </div>
 </div>
 ```
 
