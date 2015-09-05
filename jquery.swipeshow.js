@@ -79,7 +79,7 @@
 
   function Swipeshow(element, options) {
     this.$slideshow = $(element);
-    this.$container = this.$slideshow.find('> .slides');
+    this.$container = this.$slideshow.find('.slides');
     this.$slides    = this.$container.find('> .slide');
     this.options    = options;
     this.tag        = '.swipeshow.swipeshow-'+(++instances);
