@@ -12,6 +12,7 @@
  */
 
 .swipeshow,
+.swipeshow .frame,
 .swipeshow .slides,
 .swipeshow .slide {
   /* Basic resets */
@@ -44,7 +45,7 @@
   user-select: none;   
 }
 
-.swipeshow {
+.swipeshow .frame {
   overflow: hidden;
 }
 
@@ -81,7 +82,12 @@ html.swipeshow-grabbed * {
 }
 
 /* Defaults: OVERRIDE THIS! */
-.swipeshow {
+.swipeshow .frame {
   width: 100px;
   height: 100px;
+}
+
+/* Controls */
+.swipeshow .controls {
+  text-align: center;
 }
